@@ -18,7 +18,9 @@ function HeroSectionCOPD() {
           <div className="text-center max-w-4xl mx-auto">
             {/* Tiêu đề chính - Tập trung vào lợi ích cốt lõi */}
             <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
-              Phát hiện Sớm Đợt Cấp COPD bằng{" "}
+              Phát hiện sớm 
+              <br></br>
+              Đợt Cấp COPD bằng{" "}
               <span className="gradient-text">
                 AI
               </span>{" "}

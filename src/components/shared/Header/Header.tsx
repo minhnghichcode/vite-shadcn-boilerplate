@@ -38,7 +38,7 @@ function Header() {
                 <MessageSquare className="h-5 w-5 text-white" />
               </div>
               <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
-                RAGify
+                COPD Sense
               </span>
             </Link>
 

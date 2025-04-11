@@ -124,7 +124,7 @@ function Footer() {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border">
           <div className="text-muted-foreground mb-4 md:mb-0">
-            © {new Date().getFullYear()} RAGify. All rights reserved.
+            © {new Date().getFullYear()} COPD Sense. All rights reserved.
           </div>
           <div className="flex space-x-6">
             <SocialLink href="#" label="Twitter">

@@ -1,39 +1,47 @@
-import type React from "react"
-import { FileText, Globe, Settings } from "lucide-react"
+import type React from "react";
+// Chọn icons phù hợp với quy trình của COPDSENSE
+// Ví dụ: ClipboardList (thu thập), BrainCircuit (AI xử lý), BellRing (cảnh báo)
+import { ClipboardList, BrainCircuit, BellRing } from "lucide-react";
 
-function HowItWorksSection() {
+function HowItWorksSectionCOPD() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-secondary">
+    <section className="py-16 md:py-24 lg:py-32 bg-secondary"> {/* Giữ màu nền hoặc thay đổi */}
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">How It Works</h2>
+          {/* Tiêu đề và mô tả về cách COPDSENSE hoạt động */}
+          <h2 className="text-3xl font-bold tracking-tight mb-4">COPDSENSE Hoạt động Như thế nào?</h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-            Our platform makes it easy to deploy powerful AI chatbots across your organization
+            Quy trình đơn giản giúp theo dõi sức khỏe, phát hiện sớm nguy cơ và nhận cảnh báo kịp thời.
           </p>
         </div>
+        {/* Grid các bước hoạt động */}
         <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
           <StepCard
-            icon={<FileText className="w-8 h-8 text-primary" />}
-            title="1. Connect Your Data"
-            description="Upload documents, connect to URLs, or integrate with your existing databases"
+            // Icon cho bước thu thập dữ liệu
+            icon={<ClipboardList className="w-8 h-8 text-primary" />}
+            title="1. Thu thập Dữ liệu"
+            description="Bệnh nhân đeo thiết bị IoT theo dõi SpO2, nhịp tim và cập nhật các triệu chứng bất thường qua ứng dụng đơn giản."
           />
           <StepCard
-            icon={<Settings className="w-8 h-8 text-primary" />}
-            title="2. Configure Your Chatbot"
-            description="Customize LLM parameters, set access permissions, and assign data sources"
+            // Icon cho bước AI phân tích
+            icon={<BrainCircuit className="w-8 h-8 text-primary" />}
+            title="2. AI Phân tích & Dự đoán"
+            description="Hệ thống AI thông minh xử lý dữ liệu theo thời gian thực, so sánh với chỉ số nền và dự đoán nguy cơ xảy ra đợt cấp."
           />
           <StepCard
-            icon={<Globe className="w-8 h-8 text-primary" />}
-            title="3. Deploy & Analyze"
-            description="Launch your chatbot and gain insights through our comprehensive analytics dashboard"
+            // Icon cho bước cảnh báo và theo dõi
+            icon={<BellRing className="w-8 h-8 text-primary" />}
+            title="3. Cảnh báo & Theo dõi"
+            description="Gửi cảnh báo tức thì đến bệnh nhân, người thân và bác sĩ khi phát hiện dấu hiệu nguy hiểm. Bác sĩ theo dõi diễn biến qua dashboard trực quan."
           />
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-type StepCardProps = { icon: React.ReactNode; title: string; description: string }
+// Component StepCard giữ nguyên cấu trúc
+type StepCardProps = { icon: React.ReactNode; title: string; description: string };
 
 function StepCard({ icon, title, description }: StepCardProps) {
   return (
@@ -42,7 +50,7 @@ function StepCard({ icon, title, description }: StepCardProps) {
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-muted-foreground">{description}</p>
     </div>
-  )
+  );
 }
 
-export default HowItWorksSection
+export default HowItWorksSectionCOPD; // Đổi tên component
