@@ -1,7 +1,7 @@
 import type React from "react";
 // Giữ lại các icon hoặc thay đổi nếu cần:
 // Ví dụ: UserCheck (tương tác), Activity (IoT), Shield (bảo mật), BarChartIcon (phân tích)
-import { BarChartIcon, Activity, Shield, UserCheck, MessageSquare } from "lucide-react";
+import { BarChartIcon, Activity, Shield, UserCheck, Stethoscope } from "lucide-react";
 
 function FeaturesSectionCOPD() {
   return (
@@ -30,7 +30,7 @@ function FeaturesSectionCOPD() {
           />
            <FeatureDetailCard
             // Icon cho giao diện/tương tác người dùng
-            icon={<UserCheck className="w-6 h-6 text-primary" />} // Hoặc MessageSquare nếu có chatbot
+            icon={<UserCheck className="w-6 h-6 text-primary" />} // Hoặc Stethoscope nếu có chatbot
             title="Giao diện Thân thiện"
             description="Ứng dụng dễ sử dụng với form tích chọn đơn giản, phù hợp cho cả người lớn tuổi và người nhà."
           />

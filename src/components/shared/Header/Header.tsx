@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { Link } from "react-router-dom"
-import { MessageSquare, Moon, Sun, Menu, X } from "lucide-react"
+import { Stethoscope, Moon, Sun, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useAuth } from "@/contexts/AuthContext"
 import { UserProfile } from "@/components/shared/UserProfile/UserProfile"
@@ -33,9 +33,9 @@ function Header() {
       >
         <div className="container mx-auto px-4 md:px-6">
           <nav className="flex items-center justify-between">
-            <Link to="/" className="flex items-center space-x-3 transition-all duration-200 hover:opacity-80">
+            <Link to="/" className="flex items-center space-x-3 transition-all duration-200 hover:opacity-80 px-3 py-2">
               <div className="bg-gradient-to-br from-primary/80 to-primary p-2 rounded-lg shadow-sm">
-                <MessageSquare className="h-5 w-5 text-white" />
+                <Stethoscope className="h-5 w-5 text-white" />
               </div>
               <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
                 COPD Sense
@@ -174,7 +174,7 @@ function MobileMenuButton({ isOpen, onClick }: { isOpen: boolean; onClick: () =>
 
 function MobileMenu({ isOpen }: { isOpen: boolean }) {
   return (
-    <div
+    <button
       className={cn(
         "fixed inset-x-0 top-[57px] bg-background/95 backdrop-blur-md border-b md:hidden transition-all duration-300 ease-in-out overflow-hidden",
         isOpen ? "max-h-[500px] opacity-100 shadow-md" : "max-h-0 opacity-0",
@@ -222,7 +222,7 @@ function MobileMenu({ isOpen }: { isOpen: boolean }) {
           </div>
         </div>
       </div>
-    </div>
+    </button>
   )
 }
 

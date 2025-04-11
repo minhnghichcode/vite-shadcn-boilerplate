@@ -10,6 +10,7 @@ import ChatbotsPage from "@/pages/ChatbotsPage";
 import ModelsPage from "@/pages/ModelsPage";
 import KnowledgeBasePage from "@/pages/KnowledgeBasePage";
 import SettingsPage from "@/pages/SettingsPage";
+import ProfilePage from "@/pages/ProfilePage";
 import { ProtectedRoute } from "@/components/shared/ProtectedRoute/ProtectedRoute";
 import Layout from "@/layouts/DashboardLayout"; // Import layout mới
 
@@ -34,6 +35,7 @@ function App() {
               <Route path="/models" element={<ModelsPage />} />
               <Route path="/knowledge-base" element={<KnowledgeBasePage />} />
               <Route path="/settings" element={<SettingsPage />} />
+              <Route path="/profile" element={<ProfilePage />} />
             </Route>
           </Routes>
         </Router>

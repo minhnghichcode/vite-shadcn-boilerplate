@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/contexts/ToastContext';
-import { MessageSquare } from "lucide-react";
+import { Stethoscope } from "lucide-react";
 
 export default function SignInPage() {
   const [email, setEmail] = useState('');
@@ -42,7 +42,7 @@ export default function SignInPage() {
       <div className="max-w-md w-full space-y-8 p-8 bg-card rounded-lg shadow-lg border border-border">
         <div className="text-center">
           <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-            <MessageSquare className="h-6 w-6 text-primary" />
+            <Stethoscope className="h-6 w-6 text-primary" />
           </div>
           <h2 className="mt-6 text-3xl font-extrabold">Sign in to your account</h2>
           <p className="mt-2 text-sm text-muted-foreground">

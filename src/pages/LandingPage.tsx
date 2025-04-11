@@ -7,6 +7,7 @@ import UseCasesSection from "@/components/shared/UseCasesSection/UseCasesSection
 import PricingSection from "@/components/shared/PricingSection/PricingSection"
 import CTASection from "@/components/shared/CTASection/CTASection"
 import Footer from "@/components/shared/Footer/Footer"
+import { ChatBot } from "@/components/shared/ChatBot/ChatBot"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <PricingSection />
       <CTASection />
       <Footer />
+      <ChatBot />
     </div>
   )
 }

@@ -1,0 +1,19 @@
+{
+  "id": "BN-20240412-001",
+  "name": "Võ Quốc Trung",
+  "age": 62,
+  "lastCheckup": "10/04/2024",
+  "heartRate": 85,
+  "spo2": 94,
+  "mMRC": 2,
+  "mMRCDescription": "Khó thở trung bình, ảnh hưởng khi đi bộ nhanh/leo dốc",
+  "CAT": 18,
+  "CATDescription": "Ảnh hưởng trung bình của COPD, khó thở khi leo cầu thang là vấn đề chính",
+  "FEV1": {
+    "value": 1.8,
+    "predicted": 60,
+    "goldStage": "II",
+    "decline": 200
+  },
+  "exacerbationRate": 3
+}

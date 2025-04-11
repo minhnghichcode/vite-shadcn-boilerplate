@@ -10,7 +10,7 @@ import {
   Zap,
   ChevronDown,
   LogOut,
-  MessageSquare, // Added MessageSquare
+  Stethoscope, // Added Stethoscope
 } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext"; // Giữ lại context của bạn
@@ -81,7 +81,7 @@ export function AppSidebar() {
           <SidebarMenuItem>
             <Link to="/" className="flex items-center space-x-3 transition-all duration-200 hover:opacity-80 px-3 py-2">
               <div className="bg-gradient-to-br from-primary/80 to-primary p-2 rounded-lg shadow-sm">
-                <MessageSquare className="h-5 w-5 text-white" />
+                <Stethoscope className="h-5 w-5 text-white" />
               </div>
               <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
                 COPD Sense

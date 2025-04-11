@@ -1,7 +1,7 @@
 import type React from "react";
 import { Link } from "react-router-dom";
 // Cập nhật icons phù hợp hơn nếu cần (ví dụ: Activity, Bell, HeartPulse thay vì Database)
-import { ArrowUpRight, Check, BarChartIcon, MessageSquare, TrendingUp, Bell, HeartPulse } from "lucide-react";
+import { ArrowUpRight, Check, BarChartIcon, Stethoscope, TrendingUp, Bell, HeartPulse } from "lucide-react";
 
 function HeroSectionCOPD() {
   return (
