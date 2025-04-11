@@ -1,0 +1,69 @@
+# Quy tắc phát triển dự án (Cline Rules)
+
+## 1. Cấu trúc thư mục
+- **src/components/ui/**: Chứa các component lấy từ Shadcn/ui, không chỉnh sửa trực tiếp.
+- **src/components/shared/**: Các component UI tự viết, chia theo thư mục con (Header, Footer, Sidebar, ...).
+- **src/pages/**: Các trang chính, có thể nhóm theo module.
+- **src/layouts/**: Các layout chính (MainLayout, AuthLayout, ...).
+- **src/hooks/**: Custom hooks tái sử dụng.
+- **src/contexts/**: React Context cho state global.
+- **src/services/**: API call, logic backend.
+- **src/config/**: Biến môi trường, constants.
+- **src/lib/**: Helper, utils.
+- **src/store/**: State management (Redux, Zustand).
+- **src/types/**: TypeScript types, interfaces.
+- **src/assets/**: Ảnh, font, file tĩnh import vào code.
+- **public/**: File tĩnh public (favicon, robots.txt, ...).
+
+## 2. Quy tắc đặt tên
+- **Component**: PascalCase, ví dụ `UserProfile.tsx`.
+- **Hook**: camelCase, bắt đầu bằng `use`, ví dụ `useAuth.ts`.
+- **Biến, hàm**: camelCase.
+- **Thư mục**: lowercase hoặc camelCase, không dấu cách.
+- **Type, Interface**: PascalCase, thêm tiền tố `I` nếu cần, ví dụ `IUser`.
+
+## 3. Quy tắc code
+- **TypeScript** bắt buộc, không dùng `any` trừ khi bất khả kháng.
+- **React Function Component** với arrow function + `FC` type.
+- **Props** phải định nghĩa rõ ràng, dùng interface/type.
+- **Không để code chết, console.log, comment thừa** trong production.
+- **Tách nhỏ component, hook, tránh file quá dài (>300 dòng)**.
+- **Viết comment cho đoạn code phức tạp**.
+- **Sử dụng async/await, hạn chế callback hell**.
+- **Không gọi API trực tiếp trong component, phải qua service**.
+
+## 4. Style & UI
+- **Tailwind CSS** cho styling, hạn chế CSS thuần.
+- **Nếu cần CSS module, đặt cùng tên component** (`Component.module.css`).
+- **Tuân thủ style của Shadcn/ui, không override lung tung**.
+- **Responsive, dark mode phải được cân nhắc khi thiết kế UI**.
+
+## 5. Routing
+- **Sử dụng react-router-dom**.
+- **Định nghĩa route trong `src/router/`**.
+- **Dùng lazy load cho các page lớn**.
+
+## 6. Commit message
+- Theo chuẩn [Conventional Commits](https://www.conventionalcommits.org/):
+  - `feat: thêm tính năng mới`
+  - `fix: sửa bug`
+  - `refactor: cải thiện code`
+  - `docs: cập nhật tài liệu`
+  - `style: format, lint`
+  - `test: thêm/sửa test`
+  - `chore: việc khác`
+
+## 7. Review & Testing
+- **Code phải được review trước khi merge**.
+- **Viết unit test cho logic phức tạp**.
+- **Kiểm tra UI trên nhiều thiết bị, trình duyệt**.
+
+## 8. Khác
+- **Biến môi trường để trong `.env` và `.env.example`**.
+- **Không commit file build, secret, node_modules**.
+- **Giữ cấu trúc project rõ ràng, dễ mở rộng**.
+- **Ưu tiên maintainability hơn quick hack**.
+
+---
+
+> **Tuân thủ các quy tắc này giúp dự án dễ phát triển, dễ bảo trì, dễ mở rộng, giảm bug và technical debt.**

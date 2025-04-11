@@ -1,31 +1,45 @@
-import { useState } from 'react'
-import './App.css'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { AuthProvider } from "@/contexts/AuthContext";
+import { ToastProvider } from "@/contexts/ToastContext";
+import Home from "@/pages/LandingPage";
+import SignInPage from "@/pages/SignInPage";
+import DashboardPage from "@/pages/DashboardPage";
+import PlaygroundPage from "@/pages/PlaygroundPage";
+import ChatbotsPage from "@/pages/ChatbotsPage";
+import ModelsPage from "@/pages/ModelsPage";
+import KnowledgeBasePage from "@/pages/KnowledgeBasePage";
+import SettingsPage from "@/pages/SettingsPage";
+import { ProtectedRoute } from "@/components/shared/ProtectedRoute/ProtectedRoute";
+import Layout from "@/layouts/DashboardLayout"; // Import layout mới
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href='https://vitejs.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
-    </>
-  )
+    <ToastProvider>
+      <AuthProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sign-in" element={<SignInPage />} />
+            <Route
+              element={
+                <ProtectedRoute>
+                  <Layout /> 
+                </ProtectedRoute>
+              }
+            >
+              <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/playground" element={<PlaygroundPage />} />
+              <Route path="/chatbots" element={<ChatbotsPage />} />
+              <Route path="/models" element={<ModelsPage />} />
+              <Route path="/knowledge-base" element={<KnowledgeBasePage />} />
+              <Route path="/settings" element={<SettingsPage />} />
+            </Route>
+          </Routes>
+        </Router>
+      </AuthProvider>
+    </ToastProvider>
+  );
 }
 
-export default App
+export default App;
