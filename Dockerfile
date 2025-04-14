@@ -39,3 +39,5 @@ EXPOSE 2003
 
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]
+
+    

@@ -144,6 +144,15 @@ export function DashboardChatBot({ sleepAlert, isMockingPaused, onResetMocking }
       botResponse = "Bạn nên ngủ ít nhất 7 giờ mỗi ngày để đảm bảo sức khỏe tốt.";
     } else if (input.includes('xin chào') || input.includes('hello') || input.includes('hi')) {
       botResponse = "Xin chào! Tôi đang theo dõi sức khỏe của bạn. Có gì tôi có thể giúp bạn không?";
+    } else if (input.includes('mệt')) {
+      botResponse = `Chú Trung ơi, chú thích làm theo từng bước này để giữ sức khỏe ổn định nhé:
+Tìm chỗ mát để nghỉ : Chú vào phòng hoặc trong nhà có máy lạnh, tránh nắng nóng. Ghi chú nhiệt độ cao dễ dàng hơn.
+- Ngồi xuống và thư giãn : Chú ngồi thẳng lưng, thư giãn, thở thở chậm. Tấn vào bằng mũi đếm 1-2, thở ra bằng đếm 1-2-3.
+- Uống nước mát : Chú uống vài giọt nước mát để cơ thể dễ chịu hơn.
+- Tránh bụi : Không khí ngoài trời không tốt, chú ý ở trong nhà và đóng cửa sổ nhé.
+- Có chế độ đi bộ hôm nay : hôm nay nóng và bụi, chú ý nên nghỉ yên, mai đi bộ sớm lúc trời mát hơn.
+- Theo dõi thêm 15 phút : Cháu sẽ kiểm tra nhịp và oxy của chú thích sau 15 phút. Nếu chú thấy mệt, hãy nói với cháu ngay nhé."
+`
     }
     
     await streamResponse(botResponse);
